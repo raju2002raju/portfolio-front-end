@@ -1,0 +1,105 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Container for the Navbar */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    color: white;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  /* Desktop navigation */
+  .d-nav {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav-links {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect: Sliding Underline */
+  .nav-links::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: cyan;
+    transition: width 0.4s ease;
+  }
+  
+  .nav-links:hover::before {
+    width: 100%;
+  }
+  
+  .nav-links:hover {
+    color: cyan;
+  }
+  
+  /* Mobile Menu Icon */
+  .m-menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .m-menu-icon img {
+    width: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Menu icon open animation */
+  .m-menu-icon.open img {
+    transform: rotate(90deg);
+  }
+  
+  /* Responsive for Mobile */
+  @media (max-width: 768px) {
+    .d-nav {
+      display: none;
+    }
+  
+    .m-menu-icon {
+      display: block;
+    }
+  }
+  
+  /* Mobile Menu for opening and closing */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    display: none;
+    transition: max-height 0.4s ease;
+  }
+  
+  .mobile-menu.open {
+    display: flex;
+  }
+  

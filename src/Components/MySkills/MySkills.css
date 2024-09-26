@@ -1,0 +1,63 @@
+.skill-main-container{
+    min-height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-container span{
+    color: cyan;
+}
+
+.skill-container h1{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.skill-div {
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 80px 10px cyan;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    padding: 20px;
+  }
+  
+  /* Hover Effect */
+  .skill-div:hover {
+    transform: rotate(-5deg) scale(1.05);
+    box-shadow: 10px 10px 80px 10px red;
+  }
+  
+
+.skill-container-2{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.headings{
+    font-size: 28px;
+    text-align: center;
+}
+
+.content {
+    text-align: justify;
+    margin-top:10px ;
+    font-size: 16px;
+}
+
+@media (max-width:767px) {
+    .skill-container-2{
+        flex-direction: column;
+    }
+}
